@@ -1,24 +1,106 @@
-<!-- 
-  Copyright (c) 2023 Promineo Tech
-  Author:  Promineo Tech Academic Team
-  Subject:  JavaScript and DOM Manipulation 
-  FE Lab Week 10
- -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 10 Lab</title>
-  </head>
-  <body>
-    <!-- Uncomment the button below during Part 3: -->
-    <button id="myButton">Pt 3: Change Background Color</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
-    <!-- Code reads top-down. Why would our script go on the bottom 
-         of our <body> element instead of inside the head? -->
-    <script src="./week10Lab.js"></script>
-  </body>
+    <!-- table idea: creating a shared playlist for an upcoming event. Song title, artist, link to song, event attendee who requested song -->
+</head>
+<body class="container-fluid bg-primary-subtle">
+    <br>
+    <h1 class="text-center display-1 text-primary fw-bold">Molly's Party Playlist</h1>
+    <br>
+
+<!-- enter form first so it can be added to table, playlist at bottom -->
+<div class="container d-flex">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="Party Images/cupcake.jpg" class="img-fluid border border-5 border-light rounded" width="100%">
+        </div>
+    <div class="col-md-4">
+    <!-- <div class="row justify-content-center"> -->
+    <div class="card bg-secondary-subtle">
+    <!-- <div class="card-body"> -->
+                    <form class="border border-5 border-primary-subtle rounded">
+                        <div class="mt-3 mb-3 text-center fw-bold">
+                            <label for="song-title" class="form-label">Song Title</label>
+                            <input type="text" class="form-control" id="song-title">
+                        </div>
+                        <div class="mb-3 text-center fw-bold">
+                            <label for="artist-name" class="form-label">Artist Name</label>
+                            <input type="text" class="form-control" id="artist-name">
+                        </div>
+                        <div class="mb-3 text-center fw-bold">
+                            <label for="attendee-name" class="form-label">Requested By</label>
+                            <input type="text" class="form-control" id="attendee-name">
+                        </div>
+                        <div class="mb-3 text-center fw-bold">
+                            <label for="listen" class="form-label">Link to Song</label>
+                            <input type="text" class="form-control" id="listen">
+                        </div>
+                        <div class="d-flex justify-content-center mb-3"><button id="new-song" class="btn btn-outline-primary form-control" style="width: 35%;">Add Song</button>
+                        </div>
+                    </form>
+                </div> 
+                </div>
+            <div class="col-md-4">
+                    <img src="Party Images/cakeandballoons.png" class="img-fluid border border-5 border-light rounded" width="100%">
+    </div>
+</div>
+</div>
+<!-- </div> -->
+<!-- </div> -->
+
+<br>
+<!-- table to hold input rows -->
+<!-- <div id="track"> -->
+<div class="container text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-info-subtle bg-gradient rounded-3 shadow border border-5 border-primary-subtle">
+                <table class="table table-hover">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>Song Title</th>
+                            <th>Artist Name</th>
+                            <th>Requested By</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="track">
+                        <!-- use JS to add table rows -->
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+<div class="containter md-10 mb-5">
+    <img src="Party Images/bday cupcakes.webp" class="img-fluid border border-5 border-light rounded" width="100%">
+</div>
+
+<!-- i found it's very easy to add music to background BUT i actually didn't like it, cool feature for future project maybe-->
+<!-- <embed src="Party Songs/summer-party-157615.mp3" loop="false" autostart="true" width="2" height="0"></embed> -->
+
+
+<!-- link scripts to bootstrap jquery and js file -->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+</script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="songs.js"></script>
+
+</body>
 </html>
+
+<!-- Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+A Bootstrap styled table representing your choice of data.
+A Bootstrap styled form that allows a user to add a new row to the table when clicking on submit. -->
